@@ -21,7 +21,7 @@
 //! Show usage information.
 void usage(void)
 {
-    fprintf(stderr, 
+    fprintf(stderr,
             //--------------------------------- 80 columns --------------------------------->|
             "Usage:\n"
             "  wincent-icon-util -icon input.icns -folder target_folder\n");
@@ -33,7 +33,7 @@ int main(int argc, const char * argv[])
     int                 exitStatus  = EXIT_FAILURE;
     OSErr               err;
     OSStatus            status;
-    
+
     // process arguments
     NSUserDefaults      *defaults   = [NSUserDefaults standardUserDefaults];
     NSString            *icnsPath   = [defaults stringForKey:@"icon"];
@@ -43,7 +43,7 @@ int main(int argc, const char * argv[])
         usage();
         goto bail;
     }
-    
+
     // get ref for icns file
     const FSRef icnsRef;
     status = FSPathMakeRef((const UInt8 *)[icnsPath fileSystemRepresentation], (FSRef *)&icnsRef, NULL);
@@ -60,7 +60,7 @@ int main(int argc, const char * argv[])
     {
         fprintf(stderr, "error: ReadIconFromFSRef() returned %d\n", status);
         goto bail;
-    }        
+    }
 
     // get name of resource forks (most likely will be "RESOURCE_FORK")
     HFSUniStr255 resourceForkName;
@@ -97,7 +97,7 @@ int main(int argc, const char * argv[])
         fprintf(stderr, "error: FSCreateResourceFile() returned %d\n", err);
         goto bail;
     }
-        
+
     // open the resource file
     ResFileRefNum refNum;
     err = FSOpenResourceFile(&iconFileRef, resourceForkName.length, resourceForkName.unicode, fsWrPerm, &refNum);
@@ -111,7 +111,7 @@ int main(int argc, const char * argv[])
     AddResource(family, kIconFamilyType, kCustomIconResource, "\p");
     WriteResource(family);
     ReleaseResource(family);
-    
+
     // make the icon file invisible, creator Finder, type icon
     FSCatalogInfo catalogInfo;
     err = FSGetCatalogInfo(&iconFileRef, kFSCatInfoFinderInfo, &catalogInfo, NULL, NULL, NULL);
@@ -130,7 +130,7 @@ int main(int argc, const char * argv[])
         fprintf(stderr, "error: FSSetCatalogInfo() returned %d\n", err);
         goto closeResFile;
     }
-    
+
     // set the custom icon attribute on the folder
     err = FSGetCatalogInfo(&parentFolderRef, kFSCatInfoFinderInfo, &catalogInfo, NULL, NULL, NULL);
     if (err != noErr)
