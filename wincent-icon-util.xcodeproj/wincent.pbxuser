@@ -1,0 +1,146 @@
+// !$*UTF8*$!
+{
+	08FB7793FE84155DC02AAC07 /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeExecutable = BCAE60080C590CD000669801 /* wincent-icon-util */;
+		activeTarget = 8DD76F960486AA7600D96B5E /* wincent-icon-util */;
+		addToTargets = (
+			8DD76F960486AA7600D96B5E /* wincent-icon-util */,
+		);
+		codeSenseManager = BCAE60120C590CEF00669801 /* Code sense */;
+		executables = (
+			BCAE60080C590CD000669801 /* wincent-icon-util */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					528,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 207171625;
+			PBXWorkspaceStateSaveDate = 207171625;
+		};
+		perUserProjectItems = {
+			BC935AFD0C593C280017530E /* PBXTextBookmark */ = BC935AFD0C593C280017530E /* PBXTextBookmark */;
+			BC935AFE0C593C280017530E /* PBXTextBookmark */ = BC935AFE0C593C280017530E /* PBXTextBookmark */;
+			BC935B0B0C593C5A0017530E /* PBXTextBookmark */ = BC935B0B0C593C5A0017530E /* PBXTextBookmark */;
+			BC935B0E0C593C5E0017530E /* PBXTextBookmark */ = BC935B0E0C593C5E0017530E /* PBXTextBookmark */;
+			BC935B0F0C593C5E0017530E /* PBXTextBookmark */ = BC935B0F0C593C5E0017530E /* PBXTextBookmark */;
+		};
+		sourceControlManager = BCAE60110C590CEF00669801 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {706, 1680}}";
+			sepNavSelRange = "{1735, 0}";
+			sepNavVisRange = "{1586, 364}";
+			sepNavWindowFrame = "{{26, 92}, {934, 785}}";
+		};
+	};
+	8DD76F960486AA7600D96B5E /* wincent-icon-util */ = {
+		activeExec = 0;
+		executables = (
+			BCAE60080C590CD000669801 /* wincent-icon-util */,
+		);
+	};
+	BC935AFD0C593C280017530E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: passing argument 2 of 'ReadIconFromFSRef' from incompatible pointer type";
+		fRef = 08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */;
+		rLen = 1;
+		rLoc = 57;
+		rType = 1;
+	};
+	BC935AFE0C593C280017530E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */;
+		name = "wincent-icon-util.m: 58";
+		rLen = 0;
+		rLoc = 2029;
+		rType = 0;
+		vrLen = 873;
+		vrLoc = 1628;
+	};
+	BC935B0B0C593C5A0017530E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */;
+		name = "wincent-icon-util.m: 58";
+		rLen = 0;
+		rLoc = 2029;
+		rType = 0;
+		vrLen = 873;
+		vrLoc = 1628;
+	};
+	BC935B0E0C593C5E0017530E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "warning: pointer targets in passing argument 1 of 'FSPathMakeRef' differ in signedness";
+		fRef = 08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */;
+		rLen = 1;
+		rLoc = 48;
+		rType = 1;
+	};
+	BC935B0F0C593C5E0017530E /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */;
+		name = "wincent-icon-util.m: 49";
+		rLen = 0;
+		rLoc = 1735;
+		rType = 0;
+		vrLen = 364;
+		vrLoc = 1586;
+	};
+	BCAE60080C590CD000669801 /* wincent-icon-util */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "wincent-icon-util";
+		sourceDirectories = (
+		);
+	};
+	BCAE60110C590CEF00669801 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	BCAE60120C590CEF00669801 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
