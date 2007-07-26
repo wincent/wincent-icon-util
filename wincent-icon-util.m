@@ -148,6 +148,7 @@ int main(int argc, const char * argv[])
         fprintf(stderr, "error: FSSetCatalogInfo() returned %d\n", err);
         goto closeResFile;
     }
+    exitStatus = EXIT_SUCCESS;
 
 closeResFile:
     CloseResFile(refNum);
