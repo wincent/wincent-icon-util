@@ -93,7 +93,18 @@ int main(int argc, const char * argv[])
     FSRef       iconFileRef;
     err = FSCreateResourceFile(&parentFolderRef, sizeof(iconFileName) / sizeof(UniChar), iconFileName, kFSCatInfoNone, NULL,
                                resourceForkName.length, resourceForkName.unicode, &iconFileRef, NULL);
-    if (err != noErr)
+    if (err == dupFNErr)
+    {
+        // file already exists; prepare to try to open it
+        const char *iconFileSystemPath = [[folderPath stringByAppendingPathComponent:@"Icon\r"] fileSystemRepresentation];
+        status = FSPathMakeRef((const UInt8 *)iconFileSystemPath, &iconFileRef, NULL);
+        if (status != noErr)
+        {
+            fprintf(stderr, "error: FSPathMakeRef() returned %d for file \"%s\"\n", (int)status, iconFileSystemPath);
+            goto bail;
+        }
+    }
+    else if (err != noErr)
     {
         fprintf(stderr, "error: FSCreateResourceFile() returned %d\n", err);
         goto bail;
@@ -101,14 +112,27 @@ int main(int argc, const char * argv[])
 
     // open the resource file
     ResFileRefNum refNum;
-    err = FSOpenResourceFile(&iconFileRef, resourceForkName.length, resourceForkName.unicode, fsWrPerm, &refNum);
+    err = FSOpenResourceFile(&iconFileRef, resourceForkName.length, resourceForkName.unicode, fsRdWrPerm, &refNum);
     if (err != noErr)
     {
         fprintf(stderr, "error: FSOpenResourceFile() returned %d\n", err);
         goto bail;
     }
 
-    // write it to the file
+    // delete any pre-existing icon resources
+    short iconFamilyCount = Count1Resources(kIconFamilyType);
+    if (ResErr() == noErr)
+    {
+        Handle handle;
+        for (short i = 1; i <= iconFamilyCount; i++)
+        {
+            handle = Get1IndResource(kIconFamilyType, i);
+            if (handle)
+                RemoveResource(Handle);
+        }
+    }
+
+    // write new resource to the file
     AddResource(family, kIconFamilyType, kCustomIconResource, "\p");
     WriteResource(family);
     ReleaseResource(family);
