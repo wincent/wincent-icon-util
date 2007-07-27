@@ -121,14 +121,14 @@ int main(int argc, const char * argv[])
 
     // delete any pre-existing icon resources
     short iconFamilyCount = Count1Resources(kIconFamilyType);
-    if (ResErr() == noErr)
+    if (ResError() == noErr)
     {
         Handle handle;
         for (short i = 1; i <= iconFamilyCount; i++)
         {
             handle = Get1IndResource(kIconFamilyType, i);
             if (handle)
-                RemoveResource(Handle);
+                RemoveResource(handle);
         }
     }
 
