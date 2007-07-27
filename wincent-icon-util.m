@@ -50,7 +50,7 @@ int main(int argc, const char * argv[])
     status = FSPathMakeRef((const UInt8 *)icnsFileSystemPath, (FSRef *)&icnsRef, NULL);
     if (status != noErr)
     {
-        fprintf(stderr, "error: FSPathMakeRef() returned %d for icns file \"%s\"\n", (int)status, icnsFileSystemPath);
+        fprintf(stderr, "error: FSPathMakeRef() returned %d for file \"%s\"\n", (int)status, icnsFileSystemPath);
         goto bail;
     }
 
@@ -59,7 +59,7 @@ int main(int argc, const char * argv[])
     status = ReadIconFromFSRef(&icnsRef, (IconFamilyHandle *)&family);
     if (status != noErr)
     {
-        fprintf(stderr, "error: ReadIconFromFSRef() returned %d for icns file \"%s\"\n", (int)status, icnsFileSystemPath);
+        fprintf(stderr, "error: ReadIconFromFSRef() returned %d for file \"%s\"\n", (int)status, icnsFileSystemPath);
         goto bail;
     }
 
