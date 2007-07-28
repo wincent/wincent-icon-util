@@ -6,11 +6,36 @@
 	objectVersion = 43;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BCE5F8B00C5B7E5900DA99B4 /* Installer package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BCE5F8B50C5B7EA000DA99B4 /* Build configuration list for PBXAggregateTarget "Installer package" */;
+			buildPhases = (
+				BCE5F8AF0C5B7E5900DA99B4 /* ShellScript */,
+			);
+			dependencies = (
+				BCE5F8B40C5B7E5D00DA99B4 /* PBXTargetDependency */,
+			);
+			name = "Installer package";
+			productName = "Installer package";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		8DD76F9A0486AA7600D96B5E /* wincent-icon-util.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		BC935B060C593C4C0017530E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC935B050C593C4C0017530E /* Carbon.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BCE5F8B30C5B7E5D00DA99B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DD76F960486AA7600D96B5E /* wincent-icon-util */;
+			remoteInfo = "wincent-icon-util";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "wincent-icon-util.m"; sourceTree = "<group>"; };
@@ -126,9 +151,26 @@
 			projectRoot = "";
 			targets = (
 				8DD76F960486AA7600D96B5E /* wincent-icon-util */,
+				BCE5F8B00C5B7E5900DA99B4 /* Installer package */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BCE5F8AF0C5B7E5900DA99B4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# no package name specified here, so defaults to PRODUCT_NAME\n# could override this here if I wanted to incorporate the version number\n# or build from the commandline using xcodebuild and passing in an override for PRODUCT_NAME\n\"${BUILDTOOLS_DIR}/Package.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DD76F990486AA7600D96B5E /* Sources */ = {
@@ -140,6 +182,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BCE5F8B40C5B7E5D00DA99B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DD76F960486AA7600D96B5E /* wincent-icon-util */;
+			targetProxy = BCE5F8B30C5B7E5D00DA99B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB927508733DD40010E9CD /* Debug */ = {
@@ -172,6 +222,20 @@
 			};
 			name = Release;
 		};
+		BCE5F8B10C5B7E5900DA99B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = WincentIconUtility;
+			};
+			name = Debug;
+		};
+		BCE5F8B20C5B7E5900DA99B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = WincentIconUtility;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -189,6 +253,15 @@
 			buildConfigurations = (
 				1DEB927908733DD40010E9CD /* Debug */,
 				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCE5F8B50C5B7EA000DA99B4 /* Build configuration list for PBXAggregateTarget "Installer package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCE5F8B10C5B7E5900DA99B4 /* Debug */,
+				BCE5F8B20C5B7E5900DA99B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
