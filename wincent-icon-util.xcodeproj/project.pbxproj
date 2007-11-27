@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 43;
+	objectVersion = 44;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -32,7 +32,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DD76F960486AA7600D96B5E /* wincent-icon-util */;
+			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
 			remoteInfo = "wincent-icon-util";
 		};
 /* End PBXContainerItemProxy section */
