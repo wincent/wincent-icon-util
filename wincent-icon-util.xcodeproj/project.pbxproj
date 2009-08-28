@@ -42,6 +42,7 @@
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8DD76FA10486AA7600D96B5E /* wincent-icon-util */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "wincent-icon-util"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC47976B1047E7C800092001 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
+		BC47989B1047E8D000092001 /* Package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Package.sh; path = buildtools/Package.sh; sourceTree = "<group>"; };
 		BC935B050C593C4C0017530E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		BC935B1C0C593E110017530E /* base-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "base-style.xcconfig"; path = "buildtools/base-style.xcconfig"; sourceTree = "<group>"; };
 		BC935B1D0C593E110017530E /* debug-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "debug-style.xcconfig"; path = "buildtools/debug-style.xcconfig"; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 				BC935B1D0C593E110017530E /* debug-style.xcconfig */,
 				BC935B1E0C593E110017530E /* foundation-tool-target.xcconfig */,
 				BC935B1F0C593E110017530E /* release-style.xcconfig */,
+				BC47989B1047E8D000092001 /* Package.sh */,
 			);
 			name = buildtools;
 			sourceTree = "<group>";
