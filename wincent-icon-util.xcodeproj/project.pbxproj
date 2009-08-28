@@ -11,7 +11,7 @@
 			isa = PBXAggregateTarget;
 			buildConfigurationList = BCE5F8B50C5B7EA000DA99B4 /* Build configuration list for PBXAggregateTarget "Installer package" */;
 			buildPhases = (
-				BCE5F8AF0C5B7E5900DA99B4 /* ShellScript */,
+				BCE5F8AF0C5B7E5900DA99B4 /* Run "Package.sh" from buildtools */,
 			);
 			dependencies = (
 				BCE5F8B40C5B7E5D00DA99B4 /* PBXTargetDependency */,
@@ -159,13 +159,14 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		BCE5F8AF0C5B7E5900DA99B4 /* ShellScript */ = {
+		BCE5F8AF0C5B7E5900DA99B4 /* Run "Package.sh" from buildtools */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run \"Package.sh\" from buildtools";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
