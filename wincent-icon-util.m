@@ -17,6 +17,30 @@
 // system headers
 #import <objc/objc-auto.h>
 
+#pragma mark -
+#pragma mark Embedded information for what(1)
+
+// embed with tag
+#define WO_TAGGED_RCSID(msg, tag) \
+static const char *const rcsid_ ## tag[] __attribute__((used)) = { (char *)rcsid_ ## tag, "\100(#)" msg }
+
+// use as string
+#define WO_RCSID_STRING(tag) (rcsid_ ## tag[1] + 4)
+
+WO_TAGGED_RCSID("Copyright 2007-2009 Wincent Colaiuta.", copyright);
+
+#if defined(__i386__)
+WO_TAGGED_RCSID("Architecture: Intel (i386)", architecture);
+#elif defined(__x86_64__)
+WO_TAGGED_RCSID("Architecture: Intel (x86_64)", architecture);
+#endif
+
+WO_TAGGED_RCSID("Version: 2.0pre", version);
+WO_TAGGED_RCSID("wincent-icon-util", productname);
+
+#pragma mark -
+#pragma mark Functions
+
 //! Show usage information.
 void usage(void)
 {
