@@ -15,7 +15,6 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // system headers
-#import <Foundation/Foundation.h>
 #import <objc/objc-auto.h>
 
 //! Show usage information.
