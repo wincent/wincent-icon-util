@@ -51,6 +51,8 @@
 		BC4798AE1047E96600092001 /* 02wincent.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 02wincent.xml; sourceTree = "<group>"; };
 		BC4798AF1047E96600092001 /* index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xml; sourceTree = "<group>"; };
 		BC4798B01047E96600092001 /* installer-background-logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "installer-background-logo.pdf"; sourceTree = "<group>"; };
+		BC479CA71049617300092001 /* distro.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = distro.sh; sourceTree = "<group>"; };
+		BC479CA81049617300092001 /* tag-release.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "tag-release.sh"; sourceTree = "<group>"; };
 		BC935B050C593C4C0017530E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		BC935B1C0C593E110017530E /* base-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "base-style.xcconfig"; path = "buildtools/base-style.xcconfig"; sourceTree = "<group>"; };
 		BC935B1D0C593E110017530E /* debug-style.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "debug-style.xcconfig"; path = "buildtools/debug-style.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				08FB7795FE84155DC02AAC07 /* Source */,
 				C6859EA2029092E104C91782 /* Documentation */,
 				BC4798A41047E94E00092001 /* Installer package */,
+				BC47997A1048A91700092001 /* Scripts */,
 				08FB779DFE84155DC02AAC07 /* External Frameworks and Libraries */,
 				1AB674ADFE9D54B511CA2CBB /* Products */,
 			);
@@ -130,6 +133,15 @@
 				BC4798AF1047E96600092001 /* index.xml */,
 			);
 			path = "installation-package.pmdoc";
+			sourceTree = "<group>";
+		};
+		BC47997A1048A91700092001 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				BC479CA71049617300092001 /* distro.sh */,
+				BC479CA81049617300092001 /* tag-release.sh */,
+			);
+			name = Scripts;
 			sourceTree = "<group>";
 		};
 		BC935B190C593DF70017530E /* buildtools */ = {
