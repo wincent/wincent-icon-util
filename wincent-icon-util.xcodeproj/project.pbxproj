@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		BC479CAA1049619C00092001 /* Distro */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BC479CB3104961BA00092001 /* Build configuration list for PBXAggregateTarget "Distro" */;
+			buildPhases = (
+				BC479CA91049619C00092001 /* Run "distro.sh" script */,
+			);
+			dependencies = (
+				BC479CAE104961AD00092001 /* PBXTargetDependency */,
+			);
+			name = Distro;
+			productName = Distro;
+		};
 		BCE5F8B00C5B7E5900DA99B4 /* Installer package */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = BCE5F8B50C5B7EA000DA99B4 /* Build configuration list for PBXAggregateTarget "Installer package" */;
@@ -28,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BC479CAD104961AD00092001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCE5F8B00C5B7E5900DA99B4 /* Installer package */;
+			remoteInfo = "Installer package";
+		};
 		BCE5F8B30C5B7E5D00DA99B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08FB7793FE84155DC02AAC07 /* Project object */;
@@ -200,11 +219,26 @@
 			targets = (
 				8DD76F960486AA7600D96B5E /* wincent-icon-util */,
 				BCE5F8B00C5B7E5900DA99B4 /* Installer package */,
+				BC479CAA1049619C00092001 /* Distro */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BC479CA91049619C00092001 /* Run "distro.sh" script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run \"distro.sh\" script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./distro.sh;
+		};
 		BCE5F8AF0C5B7E5900DA99B4 /* Run "Package.sh" from buildtools */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +267,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BC479CAE104961AD00092001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCE5F8B00C5B7E5900DA99B4 /* Installer package */;
+			targetProxy = BC479CAD104961AD00092001 /* PBXContainerItemProxy */;
+		};
 		BCE5F8B40C5B7E5D00DA99B4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DD76F960486AA7600D96B5E /* wincent-icon-util */;
@@ -271,6 +310,20 @@
 			};
 			name = Release;
 		};
+		BC479CAB1049619C00092001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distro;
+			};
+			name = Debug;
+		};
+		BC479CAC1049619C00092001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = Distro;
+			};
+			name = Release;
+		};
 		BCE5F8B10C5B7E5900DA99B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -302,6 +355,15 @@
 			buildConfigurations = (
 				1DEB927908733DD40010E9CD /* Debug */,
 				1DEB927A08733DD40010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC479CB3104961BA00092001 /* Build configuration list for PBXAggregateTarget "Distro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC479CAB1049619C00092001 /* Debug */,
+				BC479CAC1049619C00092001 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
