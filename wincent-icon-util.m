@@ -46,8 +46,15 @@ void usage(void)
 {
     fprintf(stderr,
             //--------------------------------- 80 columns --------------------------------->|
+            "%s\n"                                              // product name
+            "http://git.wincent.com/wincent-icon-util.git\n"
+            "%s\n"                                              // version
+            "%s\n"                                              // copyright
+            "\n"
             "Usage:\n"
-            "  wincent-icon-util -icon input.icns -folder target_folder\n");
+            "  %s -icon input.icns -folder target_folder\n",
+            WO_RCSID_STRING(productname), WO_RCSID_STRING(version),
+            WO_RCSID_STRING(copyright), WO_RCSID_STRING(productname));
 }
 
 int main(int argc, const char * argv[])
