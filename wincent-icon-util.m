@@ -44,7 +44,7 @@ void usage(const char *argv0)
     fprintf(stderr,
             //--------------------------------- 80 columns --------------------------------->|
             "%s\n"                                              // product name
-            "https://wincent.com/products/wincent-icon-util\n"
+            "https://wincent.com/products/icon-util\n"
             "%s\n"                                              // version
             "%s\n"                                              // copyright
             "\n"
