@@ -28,7 +28,7 @@
 
 #define WO_COPYRIGHT_YEARS      2007-2010
 
-#define WO_INFO_PLIST_VERSION   2.0.2
+#define WO_INFO_PLIST_VERSION   2.0.2+
 
 #define WO_COPYRIGHT            "Copyright " \
                                 WO_STRINGIFY_CONTENTS(WO_COPYRIGHT_YEARS) \
