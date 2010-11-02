@@ -61,6 +61,7 @@
 		08FB779EFE84155DC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8DD76FA10486AA7600D96B5E /* wincent-icon-util */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "wincent-icon-util"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC06224C127FFCAD007BDE49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC062258127FFE60007BDE49 /* sign.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = sign.sh; sourceTree = "<group>"; };
 		BC47976B1047E7C800092001 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
 		BC47989B1047E8D000092001 /* Package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Package.sh; path = buildtools/Package.sh; sourceTree = "<group>"; };
 		BC4798A21047E92900092001 /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
@@ -167,6 +168,7 @@
 		BC47997A1048A91700092001 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				BC062258127FFE60007BDE49 /* sign.sh */,
 				BC479CA71049617300092001 /* distro.sh */,
 				BC479CA81049617300092001 /* tag-release.sh */,
 			);
@@ -204,6 +206,7 @@
 			buildPhases = (
 				8DD76F990486AA7600D96B5E /* Sources */,
 				8DD76F9B0486AA7600D96B5E /* Frameworks */,
+				BC06225C127FFEC0007BDE49 /* Run "sign.sh" script */,
 			);
 			buildRules = (
 			);
@@ -242,6 +245,20 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		BC06225C127FFEC0007BDE49 /* Run "sign.sh" script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run \"sign.sh\" script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ". \"$SOURCE_ROOT/sign.sh\"";
+		};
 		BC479CA91049619C00092001 /* Run "distro.sh" script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
