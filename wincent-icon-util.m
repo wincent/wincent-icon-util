@@ -23,7 +23,7 @@
 #import "wincent-icon-util_Version.h"
 
 WO_SET_RCSID_STRING("Wincent Icon Utility", productname);
-WO_SET_RCSID_STRING("Version: " WO_INFO_PLIST_VERSION, version);
+WO_SET_RCSID_STRING("Version: " WO_MARKETING_VERSION, version);
 WO_SET_RCSID_STRING(WO_COPYRIGHT, copyright);
 
 #pragma mark -
