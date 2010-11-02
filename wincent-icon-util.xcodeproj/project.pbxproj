@@ -98,7 +98,7 @@
 		08FB7794FE84155DC02AAC07 /* wincent-icon-util */ = {
 			isa = PBXGroup;
 			children = (
-				BC47976B1047E7C800092001 /* buildtools */,
+				BC06227712800372007BDE49 /* Submodules */,
 				BC935B190C593DF70017530E /* buildtools */,
 				BC06224B127FFC97007BDE49 /* Resources */,
 				08FB7795FE84155DC02AAC07 /* Source */,
@@ -142,6 +142,14 @@
 				BC06224C127FFCAD007BDE49 /* Info.plist */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		BC06227712800372007BDE49 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				BC47976B1047E7C800092001 /* buildtools */,
+			);
+			name = Submodules;
 			sourceTree = "<group>";
 		};
 		BC4798A41047E94E00092001 /* Installer package */ = {
