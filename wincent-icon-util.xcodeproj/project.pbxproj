@@ -328,6 +328,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC935B1E0C593E110017530E /* foundation-tool-target.xcconfig */;
 			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREFIX_HEADER = "wincent-icon-util_Version.h";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,
@@ -342,6 +344,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC935B1E0C593E110017530E /* foundation-tool-target.xcconfig */;
 			buildSettings = {
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_PREFIX_HEADER = "wincent-icon-util_Version.h";
 				OTHER_LDFLAGS = (
 					"-sectcreate",
 					__TEXT,

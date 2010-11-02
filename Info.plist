@@ -11,6 +11,6 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleVersion</key>
-	<string>2.0.1+</string>
+	<string>WO_INFO_PLIST_VERSION</string>
 </dict>
 </plist>
