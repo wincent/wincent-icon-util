@@ -301,6 +301,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC935B1E0C593E110017530E /* foundation-tool-target.xcconfig */;
 			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					Info.plist,
+				);
 				PRODUCT_NAME = "wincent-icon-util";
 			};
 			name = Debug;
@@ -309,6 +315,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BC935B1E0C593E110017530E /* foundation-tool-target.xcconfig */;
 			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					Info.plist,
+				);
 				PRODUCT_NAME = "wincent-icon-util";
 			};
 			name = Release;
