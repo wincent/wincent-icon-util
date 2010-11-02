@@ -63,6 +63,7 @@
 		BC06224C127FFCAD007BDE49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC062258127FFE60007BDE49 /* sign.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = sign.sh; sourceTree = "<group>"; };
 		BC0625F312806867007BDE49 /* wincent-icon-util-version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wincent-icon-util-version.h"; sourceTree = "<group>"; };
+		BC062ADC128099FF007BDE49 /* Rakefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		BC47976B1047E7C800092001 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
 		BC47989B1047E8D000092001 /* Package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Package.sh; path = buildtools/Package.sh; sourceTree = "<group>"; };
 		BC4798A21047E92900092001 /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 		BC47997A1048A91700092001 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				BC062ADC128099FF007BDE49 /* Rakefile */,
 				BC062258127FFE60007BDE49 /* sign.sh */,
 				BC479CA71049617300092001 /* distro.sh */,
 				BC479CA81049617300092001 /* tag-release.sh */,
