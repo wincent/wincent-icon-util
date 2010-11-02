@@ -29,7 +29,7 @@
 #pragma mark -
 #pragma mark Embedded information for what(1)
 
-#import "wincent-icon-util_Version.h"
+#import "wincent-icon-util-version.h"
 
 WO_SET_RCSID_STRING("Wincent Icon Utility", productname);
 WO_SET_RCSID_STRING("Version: " WO_MARKETING_VERSION, version);
