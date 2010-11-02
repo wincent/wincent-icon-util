@@ -62,6 +62,7 @@
 		8DD76FA10486AA7600D96B5E /* wincent-icon-util */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "wincent-icon-util"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC06224C127FFCAD007BDE49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC062258127FFE60007BDE49 /* sign.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = sign.sh; sourceTree = "<group>"; };
+		BC0625F312806867007BDE49 /* wincent-icon-util_Version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "wincent-icon-util_Version.h"; sourceTree = "<group>"; };
 		BC47976B1047E7C800092001 /* buildtools */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildtools; sourceTree = "<group>"; };
 		BC47989B1047E8D000092001 /* Package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = Package.sh; path = buildtools/Package.sh; sourceTree = "<group>"; };
 		BC4798A21047E92900092001 /* LICENSE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = LICENSE.rtf; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 		08FB7795FE84155DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BC0625F312806867007BDE49 /* wincent-icon-util_Version.h */,
 				08FB7796FE84155DC02AAC07 /* wincent-icon-util.m */,
 			);
 			name = Source;

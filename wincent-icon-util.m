@@ -1,6 +1,6 @@
 // wincent-icon-util.m
 //
-// Copyright 2007-2009 Wincent Colaiuta.
+// Copyright 2007-2010 Wincent Colaiuta.
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
 // the Free Software Foundation, either version 3 of the License, or
@@ -20,29 +20,17 @@
 #pragma mark -
 #pragma mark Embedded information for what(1)
 
-// embed with tag
-#define WO_TAGGED_RCSID(msg, tag) \
-static const char *const rcsid_ ## tag[] __attribute__((used)) = { (char *)rcsid_ ## tag, "\100(#)" msg }
+#import "wincent-icon-util_Version.h"
 
-// use as string
-#define WO_RCSID_STRING(tag) (rcsid_ ## tag[1] + 4)
-
-WO_TAGGED_RCSID("Copyright 2007-2009 Wincent Colaiuta.", copyright);
-
-#if defined(__i386__)
-WO_TAGGED_RCSID("Architecture: Intel (i386)", architecture);
-#elif defined(__x86_64__)
-WO_TAGGED_RCSID("Architecture: Intel (x86_64)", architecture);
-#endif
-
-WO_TAGGED_RCSID("Version: 2.0.1+", version);
-WO_TAGGED_RCSID("wincent-icon-util", productname);
+WO_SET_RCSID_STRING("Wincent Icon Utility", productname);
+WO_SET_RCSID_STRING("Version: " WO_INFO_PLIST_VERSION, version);
+WO_SET_RCSID_STRING(WO_COPYRIGHT, copyright);
 
 #pragma mark -
 #pragma mark Functions
 
 //! Show usage information.
-void usage(void)
+void usage(const char *argv0)
 {
     fprintf(stderr,
             //--------------------------------- 80 columns --------------------------------->|
@@ -53,8 +41,10 @@ void usage(void)
             "\n"
             "Usage:\n"
             "  %s -icon input.icns -folder target_folder\n",
-            WO_RCSID_STRING(productname), WO_RCSID_STRING(version),
-            WO_RCSID_STRING(copyright), WO_RCSID_STRING(productname));
+            WO_GET_RCSID_STRING(productname),
+            WO_GET_RCSID_STRING(version),
+            WO_GET_RCSID_STRING(copyright),
+            argv0);
 }
 
 int main(int argc, const char * argv[])
@@ -71,7 +61,7 @@ int main(int argc, const char * argv[])
     NSString            *folderPath = [defaults stringForKey:@"folder"];
     if (!icnsPath || !folderPath)
     {
-        usage();
+        usage(argv[0]);
         goto bail;
     }
 
