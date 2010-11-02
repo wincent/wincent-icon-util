@@ -49,7 +49,7 @@ void usage(const char *argv0)
             "%s\n"                                              // copyright
             "\n"
             "Usage:\n"
-            "  %s -icon input.icns -folder target_folder\n",
+            "  %s --icon input.icns --folder target_folder\n",
             WO_GET_RCSID_STRING(productname),
             WO_GET_RCSID_STRING(version),
             WO_GET_RCSID_STRING(copyright),
@@ -64,10 +64,13 @@ int main(int argc, const char * argv[])
     OSErr               err;
     OSStatus            status;
 
-    // process arguments
+    // process arguments: will accept both --icon/--folder and -icon/-folder for
+    // backwards compatibility
     NSUserDefaults      *defaults   = [NSUserDefaults standardUserDefaults];
-    NSString            *icnsPath   = [defaults stringForKey:@"icon"];
-    NSString            *folderPath = [defaults stringForKey:@"folder"];
+    NSString            *icnsPath   = [defaults stringForKey:@"-icon"];
+    if (!icnsPath)      icnsPath    = [defaults stringForKey:@"icon"];
+    NSString            *folderPath = [defaults stringForKey:@"-folder"];
+    if (!folderPath)    folderPath  = [defaults stringForKey:@"folder"];
     if (!icnsPath || !folderPath)
     {
         usage(argv[0]);
